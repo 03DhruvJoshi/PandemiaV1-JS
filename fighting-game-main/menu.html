@@ -1,0 +1,66 @@
+<html>
+  <head>
+  </head>
+
+  <body onclick="audio.play()">
+      <img src="img/background/realmenu.png"
+           style="
+        height: 576px; width: 1024px;
+      "> </img>
+
+      <audio autoplay loop>
+          <source src="audio/music/menuaudio.mp3">
+      </audio>
+
+      <a href="level1.html">
+          <img src="img/button/level1.png"
+               style="
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            top: 50px;
+            left: 100px;
+          ">
+      </a>
+
+      <a href="level2.html">
+          <img src="img/button/level2.png"
+               style="
+            position: absolute;
+            width: 300px;
+            height: 340px;
+            top: 120px;
+            left: 370px;
+          ">
+      </a>
+
+      <a href="level3.html">
+          <img src="img/button/level3.png"
+               style="
+            position: absolute;
+            width: 300px;
+            height: 340px;
+            top: 50px;
+            left: 650px;
+          ">
+      </a>
+
+      <a href="start.html">
+          <img src="img/button/backbutton.png"
+               style="
+            position: absolute;
+            width: 200px;
+            height: 100px;
+            top: 470px;
+            left: 430px;
+          ">
+      </a>
+
+      <script>
+          const audio = new Audio();
+          audio.src = './audio/music/menuaudio.mp3';
+      </script>
+
+      </body>
+
+</html>

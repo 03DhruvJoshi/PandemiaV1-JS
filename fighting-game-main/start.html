@@ -1,0 +1,83 @@
+<html>
+  <head>
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+        rel="stylesheet"
+      />
+      <style>
+        * {
+          box-sizing: border-box;
+          font-family: 'Press Start 2P', cursive;
+        }
+      </style>
+  </head>
+
+  <body onclick="audio.play()">
+    <img
+      src="img/background/menuback.png"
+      style = "
+        width: 1024px;
+        height: 576px;
+      " > </img>
+
+      <audio autoplay loop>
+        <source src="audio/music/menuaudio.mp3">
+      </audio>
+
+      <button onclick="document.location = 'menu.html';">
+        <!--<a href="level1.html"/> -->
+        <h1 
+          style="
+            position: absolute;
+            width: 200px;
+            height: 75px;
+            color:White; 
+            font-size: 45px; 
+            top: 460px;
+            left: 425px;" >PLAY</h1>
+      </button>
+
+      <a href="help.html">
+        <h1
+          style="
+            position: absolute;
+            color:White; 
+            width: 150px;
+            height: 60px;
+            top: 515px;
+            left: 150px;
+          ">HELP</h1>
+      </a>
+
+      <a href="settings.html">
+        <h1 
+          style="
+            position: absolute;
+            color:White; 
+            width: 240px;
+            height: 75px;
+            top: 515px;
+            left: 740px;
+          ">GUIDE</h1>
+      </a>
+
+      <script>
+        var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+        if (!isChrome){
+         $('#iframeAudio').remove()
+        }
+        else {
+         $('#playAudio').remove() // just to make sure that it will not have 2x audio in the background
+        }
+      </script>
+
+      <script>
+        const audio = new Audio();
+        audio.src = './audio/music/menuaudio.mp3';
+      </script>
+
+  </body>
+
+</html>

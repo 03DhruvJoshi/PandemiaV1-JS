@@ -1,0 +1,165 @@
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Press Start 2P', cursive;
+    }
+  </style>
+</head>
+<body onclick="audio.play()">
+  <!-- red container div -->
+  <div style="position: relative; display: inline-block">
+    <!-- smaller red container div -->
+    <div
+      style="
+        position: absolute;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        padding: 20px;
+      "
+    >
+      <!-- player health -->
+      <div
+        style="
+          position: relative;
+          width: 300px;
+          top: 50px;
+          display: flex;
+          justify-content: flex-end;
+          border: 4px solid white;
+        "
+      >
+        <div style="background-color: red; height: 30px; width: 298px"></div>
+        <div
+          id="playerHealth"
+          style="
+            position: absolute;
+            background: #12ff2a;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0px;
+            width: 296x;
+          "
+        ></div>
+      </div>
+
+      <!-- timer -->
+      <div
+        id="timer"
+        style="
+          position: absolute;
+          background-color: black;
+          width: 100px;
+          height: 70px;
+          flex-shrink: 0;
+          display: flex;
+          top: 90px;
+          left: 470px;
+          align-items: center;
+          justify-content: center;
+          color: white;
+          border: 4px solid white;
+        "
+      >
+        10
+      </div>
+
+      <!-- Ttiles -->
+      <h1
+        style="
+          position: absolute;
+          color: white;
+        ">
+        Saviour
+      </h1>
+
+      <h1
+        style="
+          position: absolute;
+          color: white;
+          left: 810px;
+        ">
+        Corona
+      </h1>
+
+      <!-- Logo -->
+      <a href="pause2.html">
+        <img src="img/button/Logo_pausepage.png"
+          style = "
+            position: absolute;
+            left: 370px;
+            top: 20px;
+          "> 
+      </a> 
+
+      <!-- enemy health -->
+      <div
+        style="
+          position: relative;
+          width: 300px;
+          display: flex;
+          top:50px;
+          justify-content: flex-end;
+          border: 4px solid white;
+          left: 380px;
+        "
+      >
+        <div style="background-color: red; height: 30px; width: 300px"></div>
+        <div
+          id="enemyHealth"
+          style="
+            position: absolute;
+            background: #12ff2a;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0px;
+            width: 296x;
+          "
+        ></div>
+      </div>
+      <div></div>
+    </div>
+    <div
+      id="displayText"
+      style="
+        position: absolute;
+        color: white;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px; 
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: none;
+      "
+    >
+      Tie
+    </div>
+    <canvas></canvas>
+  </div>
+
+   <script>
+    const audio = new Audio();
+    audio.src = './audio/music/hatebreed.mp3';
+  </script>
+
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
+    integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script src="js/utils2.js"></script>
+  <script src="js/classes.js"></script>
+  <script src="level2.js"></script>
+</body>
